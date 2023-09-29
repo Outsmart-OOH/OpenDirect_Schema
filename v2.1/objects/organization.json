@@ -1,0 +1,103 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/organization.json",
+    "type": "object",
+    "title": "Organisation object",
+    "description": "The organization resource may represent an advertiser or agency (buyer).",
+    "properties": {
+        "address": {
+            "$id": "#/properties/address",
+            "description": "The primary address of the organization",
+            "type": "object",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/address.json"
+        },
+        "advertiserbrands": {
+            "$id": "#/properties/advertiserbrands",
+            "description": "Array of one or more advertiserbrand objects associated with an advertiser organisation type",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/advertiserbrand.json"
+            }
+        },
+        "contacts": {
+            "$id": "#/properties/contacts",
+            "description": "A list of one or more contacts with the organisation",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/contact.json"
+            }
+        },
+        "disapprovalreason": {
+            "$id": "#/properties/disapprovalreason",
+            "description": "The reason why the organisation was not registered. Must be specified if Status is Disapproved",
+            "type": "string",
+            "maxLength": 255
+        },
+        "fax": {
+            "$id": "#/properties/fax",
+            "description": "The organisation's fax number",
+            "type": "string",
+            "maxLength": 20
+        },
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "ID",
+            "description": "A system-generated opaque ID that uniquely identifies this resource.",
+            "maxLength": 36
+        },
+        "organizationtype": {
+            "$id": "#/properties/organizationtype",
+            "description": "The core activity that an organisation undertakes as a business e.g. advertiser, OOH Specialist or Media Agency",
+            "type": "string",
+            "enum": [
+                "advertiser",
+                "intermediary",
+                "agency",
+                "publisher"
+            ]
+        },
+        "name": {
+            "$id": "#properties/name",
+            "description": "The organization's display name",
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1
+        },
+        "phone": {
+            "$id": "#/properties/phone",
+            "description": "The organization's phone number",
+            "type": "string",
+            "maxLength": 20
+        },
+        "status": {
+            "$id": "#/properties/status",
+            "description": "A value that indicates the current state of the approval process. The approval process confirms the organizatoin's identity",
+            "type": "string",
+            "enum": [
+                "Pending",
+                "Approved",
+                "Disapproved",
+                "Limited"
+            ]
+        },
+        "url": {
+            "$id": "#/properties/url",
+            "description": "A URL to the organization's website",
+            "type": "string",
+            "maxLength": 1024
+        },
+        "eids": {
+            "$id": "#/properties/eids",
+            "type": "array",
+            "description": "Array of extended ids (EID) that detail third party datasources and ids that may be referenced to identify the AdvertiderBrand to the buyer.",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/eid.json"
+            }
+        },
+        "ext": {
+            "$id": "#/properties/ext",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/ext.json"
+        }
+    }
+}
