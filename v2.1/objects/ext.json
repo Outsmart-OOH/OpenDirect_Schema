@@ -1,0 +1,7 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/master/v2.1/objects/ext.json",
+    "type": "object",
+    "title": "ext",
+    "description": "Optional vendor-specific extensions object"
+}
