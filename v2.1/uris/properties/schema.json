@@ -1,0 +1,7 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json",
+    "type": "string",
+    "title": "Schema reference",
+    "description": "Schema reference in URI requests and responses"
+}
