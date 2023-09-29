@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/advertiserbrands/POST_response.json",
+    "type": "object",
+    "title": "Response for POST /advertiserbrands",
+    "description": "The schema of a response that gives an AdvertiserBrand",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/advertiserbrand.json"
+        }
+    ],
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "name",
+        "organizationid",
+        "eids"
+    ]
+}

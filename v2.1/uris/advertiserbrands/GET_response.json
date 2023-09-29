@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/advertiserbrands/GET_response.json",
+    "type": "object",
+    "title": "Response for GET /advertiserbrands",
+    "description": "The schema of a response that gives a collection of AdvertiserBrands",
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "advertiserbrands": {
+            "type": "array",
+            "description": "Collection of AdvertiserBrand",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/advertiserbrand.json",
+                "additionalProperties": false,
+                "required": [
+                    "id",
+                    "name",
+                    "organizationid"
+                ]
+            }
+        },
+        "paging": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/paging.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "advertiserbrands"
+    ]
+}
