@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/eid.json",
+    "type": "object",
+    "title": "EID",
+    "description": "Extended identifiers support in the OpenDirect specification allows buyers to use third party identifiers in ther trading process. This object can contain one or more TPIDs from a single source or a technology provider. The publisher should ensure that business agreements allow for the sending of this data.",
+    "additionalProperties": false,
+    "required": [
+        "source",
+        "name",
+        "tpids"
+    ],
+    "properties": {
+        "source": {
+            "$id": "#/properties/source",
+            "description": "Source or technology provider responsible for the set of included IDs. Expressed as a top-level domain",
+            "type": "string",
+            "format": "uri"
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "description": "Name of third party ID.",
+            "type": "string"
+        },
+        "tpids": {
+            "$id": "#/properties/tpids",
+            "type": "array",
+            "description": "Array of extended third party ID objects from the given source.",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/tpid.json"
+            }
+        },
+        "ext": {
+            "$id": "#/properties/ext",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/ext.json"
+        }
+    }
+}
