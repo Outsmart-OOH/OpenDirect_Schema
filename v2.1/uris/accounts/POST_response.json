@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/POST_response.json",
+    "type": "object",
+    "title": "Response for POST /accounts",
+    "description": "The schema of a response to POST /accounts",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/account.json"
+        }
+    ],
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "name",
+        "buyerid",
+        "advertiserid"
+    ]
+}
