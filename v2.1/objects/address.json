@@ -1,0 +1,57 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/address.json",
+    "type": "object",
+    "title": "Address",
+    "description": "Address object.",
+    "required": [
+        "addressline1",
+        "city",
+        "state",
+        "country"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "addressline1": {
+            "$id": "#/properties/addressline1",
+            "type": "string",
+            "maxLength": 255,
+            "pattern": "^[A-Za-z0-9-\\s]*$",
+            "description": "The first line of the address of an organization or contact for which this address is associated."
+        },
+        "addressline2": {
+            "$id": "#/properties/addressline2",
+            "type": "string",
+            "maxLength": 255,
+            "pattern": "^[A-Za-z0-9-\\s]*$",
+            "description": "The optional second line of the address"
+        },
+        "city": {
+            "$id": "#/properties/city",
+            "type": "string",
+            "maxLength": 255,
+            "pattern": "^[A-Za-z-\\s]*$",
+            "description": "The city name of an organization or contact for which this address is associated."
+        },
+        "country": {
+            "$id": "#/properties/country",
+            "type": "string",
+            "maxLength": 255,
+            "description": "Country of the Organization"
+        },
+        "postalcode": {
+            "$id": "#/properties/postalcode",
+            "type": "string",
+            "maxLength": 15,
+            "pattern": "^[A-Za-z0-9-\\s]*$",
+            "description": "The postal or zip code for the address"
+        },
+        "state": {
+            "$id": "#/properties/state",
+            "type": "string",
+            "maxLength": 36,
+            "pattern": "^[A-Za-z]*$",
+            "description": "The state or province for the address."
+        }
+    }
+}
