@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/paging.json",
+    "type": "object",
+    "title": "paging",
+    "description": "paging object.",
+    "additionalProperties": false,
+    "required": [
+        "offset",
+        "count",
+        "totalrecords"
+    ],
+    "properties": {
+        "offset": {
+            "description": "",
+            "type": "integer"
+        },
+        "count": {
+            "description": "",
+            "type": "integer"
+        },
+        "totalrecords": {
+            "description": "",
+            "type": "integer"
+        },
+        "countlimit": {
+            "description": "",
+            "type": "integer"
+        }
+        
+    }
+}
