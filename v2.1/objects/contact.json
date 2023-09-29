@@ -1,0 +1,74 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/contact.json",
+    "type": "object",
+    "title": "Contact Type",
+    "description": "Defines an agency or advertiser contact.",
+    "required": [
+        "firstname",
+        "lastname"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "address": {
+            "$id": "#/properties/address",
+            "description": "Required if TYPE is Billing and the preferred billing method for the organization or order is paper.",
+            "type": "object",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/address.json"
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string",
+            "format": "email",
+            "maxLength": 255,
+            "description": "The contact's email address"
+        },
+        "honorific": {
+            "$id": "#/properties/honorific",
+            "type": "string",
+            "maxLength": 20,
+            "description": "The contact's honorific such as Mr, Mrs"
+        },
+        "fax": {
+            "$id": "#/properties/fax",
+            "type": "string",
+            "maxLength": 20,
+            "description": "The contact's fax number."
+        },
+        "firstname": {
+            "$id": "#/properties/firstname",
+            "type": "string",
+            "maxLength": 20,
+            "description": "The contact's first name"
+        },
+        "lastname": {
+            "$id": "#/properties/lastname",
+            "type": "string",
+            "maxLength": 20,
+            "description": "The contact's last name"
+        },
+        "phone": {
+            "$id": "#/properties/phone",
+            "type": "string",
+            "maxLength": 20,
+            "description": "The contact's phone number"
+        },
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "maxLength": 30,
+            "description": "The contact's job title"
+        },
+        "type": {
+            "$id": "#/properties/type",
+            "description": "Defines the possible types of Contacts.",
+            "type": "string",
+            "enum": [
+                "Billing",
+                "Buyer",
+                "Creative",
+                "Sales"
+            ]
+        }
+    }
+}
