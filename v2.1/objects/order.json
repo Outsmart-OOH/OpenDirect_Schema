@@ -1,0 +1,139 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/order.json",
+    "type": "object",
+    "title": "Order object",
+    "description": "Account orders hold a collection of lines. The account owns the orders and the order owns the lines.",
+    "default": {},
+    "additionalProperties": false,
+    "properties": {
+        "type": "string",
+        "format": "uri",
+        "description": "$schema only included to aid validation of JSON, should not be used in real calls."
+    },
+    "accountid": {
+        "$id": "#/properties/accountid",
+        "type": "string",
+        "title": "Account ID",
+        "description": "The ID of the account that identifies the advertiser and buyer that own the order.",
+        "maxLength": 36
+    },
+    "advertiserbrandid": {
+        "$id": "#/properties/advertiserbrandid",
+        "type": "string",
+        "title": "Advertiser Brand ID",
+        "description": "The id of the AdvertiserBrand being advertised.",
+        "maxLength": 25
+    },
+    "brand": {
+        "$id": "#/properties/brand",
+        "type": "string",
+        "title": "Brand",
+        "description": "A descriptive name for the brand being advertised.",
+        "maxLength": 25
+    },
+    "budget": {
+        "$id": "#/properties/budget",
+        "type": "number",
+        "title": "Budget",
+        "description": "The orders estimated budget."
+    },
+    "contacts": {
+        "$id": "#/properties/contacts",
+        "description": "A list of one or more contacts with the organisation.",
+        "type": "array",
+        "items": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/contact.json"
+        }
+    },
+    "currency": {
+        "$id": "#/properties/currency",
+        "type": "string",
+        "title": "Currency",
+        "description": "The currency that all monetary properties of the order and lines are specified in.",
+        "maxLength": 3
+    },
+    "enddate": {
+        "$id": "#/properties/enddate",
+        "type": "string",
+        "format": "date-time",
+        "title": "Order",
+        "description": "The date and time that the order will end."
+    },
+    "ext": {
+        "$id": "#/properties/ext",
+        "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/ext.json"
+    },
+    "orderexpirydate": {
+        "$id": "#/properties/orderexpirydate",
+        "type": "string",
+        "format": "date-time",
+        "title": "Order Expiry Date",
+        "description": "The date and time using the ISO 8601 format for when the order expires. Publisher will only hold inventory up until the date and time indicated."
+    },
+    "id": {
+        "$id": "#/properties/id",
+        "type": "string",
+        "title": "Id of Order",
+        "description": "A system-generated opaque ID that uniquely identifies this resource.",
+        "maxLength": 36
+    },
+    "name": {
+        "$id": "#/properties/name",
+        "type": "string",
+        "title": "Order Name",
+        "description": "The order's display name. The name must be unique.",
+        "maxLength": 100
+    },
+    "orderstatus": {
+        "$id": "#/properties/orderstatus",
+        "type": "string",
+        "title": "Order Status",
+        "description": "Specifies the Status of the order.",
+        "enum": [
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+        ]
+    },
+    "packageonly": {
+        "$id": "#/properties/packageonly",
+        "type": "boolean",
+        "title": "Package Only",
+        "description": "Identifies whether the order is only available as a package or if specific items can be separated from the inventory."
+    },
+    "preferredbillingmethod": {
+        "$id": "#/properties/preferredbillingmethod",
+        "type": "string",
+        "title": "Preferred Billing Method",
+        "description": "Electronic (Default) or Postal.",
+        "enum": [
+            "Electronic",
+            "Postal"
+        ]
+    },
+    "providerdata": {
+        "$id": "#/properties/providerdata",
+        "description": "An opaque CLOB of provider-defined data.",
+        "type": "object"
+    },
+    "publisherid": {
+        "$id": "#/properties/publisherid",
+        "description": "The ID of the Publisher providing this order.",
+        "type": "string",
+        "maxLength": 36
+    },
+    "specialinstructions": {
+        "$id": "#/properties/specialinstructions",
+        "type": "string",
+        "title": "Special Instructions",
+        "description": "Free text box to capture any special intructions relating to the order.",
+        "maxLength": 255
+    },
+    "startdate": {
+        "$id": "#/properties/startdate",
+        "description": "The date and time that the order will start.",
+        "type": "string",
+        "format": "date-time"
+    }
+}
