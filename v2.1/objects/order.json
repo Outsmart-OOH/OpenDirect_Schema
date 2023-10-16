@@ -19,7 +19,7 @@
             "type": "string",
             "title": "Advertiser Brand ID",
             "description": "The id of the AdvertiserBrand being advertised.",
-            "maxLength": 25
+            "maxLength": 36
         },
         "brand": {
             "$id": "#/properties/brand",
