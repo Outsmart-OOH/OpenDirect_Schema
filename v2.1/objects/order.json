@@ -5,7 +5,6 @@
     "title": "Order object",
     "description": "Account orders hold a collection of lines. The account owns the orders and the order owns the lines.",
     "default": {},
-    "additionalProperties": false,
     "properties": {
         "accountid": {
             "$id": "#/properties/accountid",
