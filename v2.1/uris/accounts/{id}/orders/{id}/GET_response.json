@@ -12,16 +12,16 @@
     "properties": {
         "$schema": {
             "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
-        },
-        "unevaluatedProperties": false,
-        "required": [
-            "id",
-            "name",
-            "accountid",
-            "publisherid",
-            "currency",
-            "orderstatus",
-            "advertiserbrandid"
-        ]
-    }
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "name",
+        "accountid",
+        "publisherid",
+        "currency",
+        "orderstatus",
+        "advertiserbrandid"
+    ]
 }
