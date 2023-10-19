@@ -21,7 +21,6 @@
         "accountid",
         "publisherid",
         "currency",
-        "orderstatus",
         "advertiserbrandid"
     ]
 }
