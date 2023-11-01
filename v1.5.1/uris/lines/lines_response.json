@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/uris/lines/lines_response.json",
+    "type": "object",
+    "title": "Response for a single Line",
+    "description": "The schema of a response that gives a single Line",
+    "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/resources/line/line_object.json",
+    "required": [
+        "Id",
+        "Name",
+        "StartDate",
+        "EndDate",
+        "Targeting",
+        "OOHProviderData"
+    ]
+}

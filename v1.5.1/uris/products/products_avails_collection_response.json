@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/uris/products/products_avails_collection_response.json",
+    "type": "object",
+    "title": "Response for a collection of ProductAvails",
+    "description": "The schema of a response that gives a collection of ProductAvails and Unavailability Reasons",
+    "required": [
+        "ProductAvails"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "uri",
+            "description": "$schema only included to aid validation of JSON, should not be used in real calls."
+        },
+        "ProductAvails": {
+            "$id": "#/properties/Products",
+            "type": "array",
+            "title": "Array of ProductAvails",
+            "description": "Collection of ProductAvails",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/common/productAvails_object.json",
+                "required": [
+                    "Currency",
+                    "ProductId",
+                    "Availability",
+                    "Price"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/general/error.json",
+    "type": "object",
+    "title": "400 error object",
+    "description": "Return for a POST, PATCH request that contains invalid data, or when the requested action (i.e. book) is not valid.The response must include the reasons for the error.",
+    "default": {},
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "format": "uri",
+            "description": "$schema only included to aid validation of JSON, should not be used in real calls."
+        },
+        "Errors": {
+            "$id": "#/properties/Errors",
+            "type": "array",
+            "title": "Array of one or more values ",
+            "additionalItems": true,
+            "Required": [
+                "ErrorCode",
+                "ErrorMessage"
+            ],
+            "items": {
+                "properties": {
+                    "ErrorCode": {
+                        "$id": "#/properties/Errors/properties/ErrorCode",
+                        "type": "string",
+                        "title": "Error Code",
+                        "description": "A symbolic string constant that identifies the error."
+                    },
+                    "ErrorMessage": {
+                        "$id": "#/properties/Errors/properties/ErrorMessage",
+                        "type": "string",
+                        "title": "Message",
+                        "description": "A summary of the error that occurred."
+                    },
+                    "Availability": {
+                        "$id": "#/properties/ProductAvails",
+                        "type": "array",
+                        "title": "Array of ProductAvails",
+                        "description": "A detailed response in terms of Availability, Partial Availability and Unavailabiliy and Context",
+                        "items": {
+                            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v1.5.1/common/productAvails_Availability_object.json"
+                        }
+                    },
+                    "Link": {
+                        "$id": "#/properties/Errors/properties/Link",
+                        "type": "string",
+                        "title": "Link",
+                        "description": "A URL to additional help text that may help the caller solve the issue."
+                    }
+                }
+            }
+        }
+    }
+}
