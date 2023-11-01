@@ -109,8 +109,7 @@
         },
         "providerdata": {
             "$id": "#/properties/providerdata",
-            "description": "An opaque CLOB of provider-defined data.",
-            "type": "object"
+            "ref$": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/providerdata.json"
         },
         "publisherid": {
             "$id": "#/properties/publisherid",

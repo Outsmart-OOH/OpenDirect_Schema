@@ -1,0 +1,50 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/providerdata.json",
+    "type": "object",
+    "title": "Provider Data",
+    "description": "Allows buyers to detail information that may be used to identify their order in a Seller's system using their own IDs or references.",
+    "required": [
+        "campaignid",
+        "campaignname"
+    ],
+    "additionalProperties": false,
+    "properties": {
+        "campaignid": {
+            "$id": "#/properties/campaignid",
+            "description": "Provided by the Buyer to uniquely identify the Advertising Campaign for which the Order is being placed",
+            "type": "string",
+            "maxLength": 255
+        },
+        "campaignname": {
+            "$id": "#/properties/campaignname",
+            "description": "A descriptive name provided by the Buyer which is associated with the Advertising Campaign for which the Order is being placed",
+            "type": "string",
+            "maxLength": 255
+        },
+        "ponumber": {
+            "$id": "#/properties/ponumber",
+            "description": "Provided by Buyer as a reference to be used by Buyers for any offline contact related to the Order",
+            "type": "string",
+            "maxLength": 255
+        },
+        "salesorderreference": {
+            "$id": "#/properties/salesorderreference",
+            "description": "Provided by the Media Owner as a reference to be used by Buyers for any offline contact related to the Order",
+            "type": "string",
+            "maxLength": 255
+        },
+        "barterorganizationid": {
+            "$id": "#/properties/barterorganizationid",
+            "description": "The OrganizationID of a Barter Company can be added here to flag a Barter transaction",
+            "type": "string",
+            "maxLength": 255
+        },
+        "other": {
+            "$id": "#/properties/other",
+            "description": "An opaque CLOB of provider-defined data.",
+            "type": "CLOB",
+            "maxLength": 255
+        }
+    }
+}
