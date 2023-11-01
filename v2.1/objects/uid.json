@@ -1,8 +1,8 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/tpid.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/uid.json",
     "type": "object",
-    "title": "TPID",
+    "title": "UID",
     "description": "This object contains a single third party identifier provided as part of extended identifiers. The publisher should ensure that business agreements allow for the sending of this data.",
     "additionalProperties": false,
     "required": [

@@ -8,7 +8,7 @@
     "required": [
         "source",
         "name",
-        "tpids"
+        "uids"
     ],
     "properties": {
         "source": {
@@ -22,12 +22,12 @@
             "description": "Name of third party ID.",
             "type": "string"
         },
-        "tpids": {
+        "uids": {
             "$id": "#/properties/tpids",
             "type": "array",
             "description": "Array of extended third party ID objects from the given source.",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/tpid.json"
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/uid.json"
             }
         },
         "ext": {
