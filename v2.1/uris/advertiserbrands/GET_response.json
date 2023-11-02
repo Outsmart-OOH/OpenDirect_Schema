@@ -13,7 +13,7 @@
             "description": "Collection of AdvertiserBrand",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/advertiserbrand.json",
-                "additionalProperties": false,
+                "unevaluatedProperties": false,
                 "required": [
                     "id",
                     "name",
