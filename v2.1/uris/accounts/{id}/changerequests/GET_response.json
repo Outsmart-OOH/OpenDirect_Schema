@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/{id}/changerequests/GET_response.json",
+    "type": "object",
+    "title": "Response for GET /changerequests",
+    "description": "Gets a list of all change requests that belong to the account",
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "changerequests": {
+            "type": "array",
+            "description": "Collection of change requests",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/changerequest.json",
+                "unevaluatedProperties": false,
+                "required": [
+                    "id",
+                    "accountid",
+                    "orderid",
+                    "requesterid"
+                ]
+            }
+        },
+        "unevaluatedProperties": false,
+        "required": [
+            "changerequests"
+        ]
+    }
+}
