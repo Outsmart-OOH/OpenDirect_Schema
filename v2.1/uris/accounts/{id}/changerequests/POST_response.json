@@ -1,0 +1,24 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/{id}/changerequests/POST_response.json",
+    "type": "object",
+    "title": "Response for POST /change requests",
+    "description": "Adds a change request to the account",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/changerequest.json"
+        }
+    ],
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "accountid",
+        "orderid",
+        "requesterid"
+    ]
+}
