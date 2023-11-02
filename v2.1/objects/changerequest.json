@@ -1,0 +1,83 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/changerequest.json",
+    "type": "object",
+    "title": "ChangeRequest",
+    "description": "ChangeRequest object.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "ID",
+            "description": "A system-generated opaque ID that uniquely identifies the brand",
+            "maxLength": 36
+        },
+        "accountid": {
+            "$id": "#/properties/accountid",
+            "type": "string",
+            "title": "Account ID",
+            "description": "The ID of the account that identifies the advertiser and buyer that own the order.",
+            "maxLength": 36
+        },
+        "comment": {
+            "$id": "#/properties/comment",
+            "type": "string",
+            "title": "Comment",
+            "description": "User notes related to this line.",
+            "maxLength": 1000
+        },
+        "contacts": {
+            "$id": "#/properties/contacts",
+            "description": "A list of one or more contacts with the organisation",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/contact.json"
+            }
+        },
+        "orderid": {
+            "$id": "#/properties/orderid",
+            "type": "string",
+            "title": "Order ID",
+            "description": "The ID of the Order that the Change is Requested for.",
+            "maxLength": 36
+        },
+        "lineid": {
+            "$id": "#/properties/lineid",
+            "type": "string",
+            "title": "Line ID",
+            "description": "The ID of the Line in the Order that the Change is Requested for.",
+            "maxLength": 36
+        },
+        "requesterid": {
+            "$id": "#/properties/requesterid",
+            "type": "string",
+            "title": "Requester ID",
+            "description": "The OrganisationID of the Change Requester.",
+            "maxLength": 36
+        },
+        "providerdata": {
+            "$id": "#/properties/providerdata",
+            "ref$": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/providerdata.json"
+        },
+        "status": {
+            "$id": "#/properties/status",
+            "description": "A value that indicates the current state of the approval process. The approval process confirms the organizatoin's identity",
+            "type": "string",
+            "enum": [
+                "PENDING",
+                "APPROVED",
+                "REJECTED"
+            ]
+        },
+        "webhook": {
+            "$id": "#/properties/webhook",
+            "type": "string",
+            "title": "Webhook",
+            "description": "URI which is called when the change is approved, rejected or modified by the Seller.",
+            "maxLength": 36
+        },
+        "ext": {
+            "$id": "#/properties/ext",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/ext.json"
+        }
+    }
+}
