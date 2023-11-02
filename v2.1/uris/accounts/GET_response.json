@@ -13,7 +13,7 @@
             "description": "Collection of Accounts",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/account.json",
-                "additionalProperties": false,
+                "unevaluatedProperties": false,
                 "required": [
                     "id",
                     "name",

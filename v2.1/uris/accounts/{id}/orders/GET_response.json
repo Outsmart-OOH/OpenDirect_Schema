@@ -14,7 +14,7 @@
             "description": "Collection of Orders",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/order.json",
-                "additionalProperties": false,
+                "unevaluatedProperties": false,
                 "required": [
                     "id",
                     "name",
