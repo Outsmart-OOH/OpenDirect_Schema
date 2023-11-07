@@ -44,7 +44,7 @@
             "$id": "#/properties/other",
             "description": "An opaque CLOB of provider-defined data.",
             "type": "CLOB",
-            "maxLength": 255
+            "maxLength": 10000
         }
     }
 }
