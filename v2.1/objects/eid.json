@@ -23,7 +23,7 @@
             "type": "string"
         },
         "uids": {
-            "$id": "#/properties/tpids",
+            "$id": "#/properties/uids",
             "type": "array",
             "description": "Array of extended third party ID objects from the given source.",
             "items": {
