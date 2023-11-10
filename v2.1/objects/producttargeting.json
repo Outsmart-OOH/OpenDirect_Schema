@@ -1,0 +1,111 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json",
+    "type": "object",
+    "title": "Product Targeting",
+    "description": "Product Targeting object.",
+    "required": [
+        "name",
+        "type",
+        "datasource",
+        "target",
+        "targetvalues",
+        "selectable"
+    ],
+    "additionalProperties": "false",
+    "properties": {
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Name",
+            "description": "The key objects for describing physical media campaigns and products",
+            "enum": [
+                "Inventory",
+                "Delivery",
+                "Distribution",
+                "Investment",
+                "Prohibitions"
+            ]
+        },
+        "type": {
+            "$id": "#/properties/type",
+            "type": "string",
+            "title": "Type",
+            "description": "How the producttargeting is being quantified",
+            "enum": [
+                "Frames",
+                "Audience",
+                "Investment",
+                "Total"
+            ]
+        },
+        "datasource": {
+            "$id": "#/properties/datasource",
+            "type": "string",
+            "title": "Data Source",
+            "description": "The identification and inclusion of third party data sources into the schema",
+            "Max Length": 255
+        },
+        "target": {
+            "$id": "#/properties/target",
+            "type": "string",
+            "title": "Target",
+            "description": "Description of the producttargeting Metric",
+            "Max Length": 255
+        },
+        "targetvalues": {
+            "$id": "#/properties/targetvalues",
+            "type": "array",
+            "title": "Target Values",
+            "description": "An array of one or more values for product targeting",
+            "items": {
+                "type": "string",
+                "maxLength": 255
+            }
+        },
+        "selectable": {
+            "$id": "#/properties/selectable",
+            "type": "boolean",
+            "title": "Selectable",
+            "description": "Defines whether a Buyer can select from the given list of targetvalues or whether the targetvalues are fixed."
+        },
+        "count": {
+            "$id": "#/properties/count",
+            "type": "number",
+            "title": "Count",
+            "description": "Count of targetvalues"
+        },
+        "minimum": {
+            "$id": "#/properties/minimum",
+            "type": "number",
+            "title": "Minimum",
+            "description": "Defines the minimum number of targetvalues that must be selected"
+        },
+        "maximum": {
+            "$id": "#/properties/maximum",
+            "type": "number",
+            "title": "Maximum",
+            "description": "Defines the maximum number of targetvalues that must be selected"
+        },
+        "increment": {
+            "$id": "#/properties/increment",
+            "type": "number",
+            "title": "Increment",
+            "description": "Defines the increments that are permitted for the targeting values"
+        },
+        "default": {
+            "$id": "#/properties/default",
+            "title": "Default",
+            "description": "Defines the default targetvalues(s) that are selected if the Buyer does not specify any TargetValue(s) or the target is not selectable. This can be a string (255) or a number.",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "maxLength": 255
+                },
+                {
+                    "type": "number"
+                }
+            ]
+        }
+    }
+}
