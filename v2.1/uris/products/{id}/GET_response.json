@@ -6,7 +6,7 @@
     "description": "Gets the specified Product from the product catalog.",
     "allOf": [
         {
-           "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/product.json"
         }
     ],
     "properties": {
