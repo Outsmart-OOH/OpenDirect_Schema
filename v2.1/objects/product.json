@@ -1,0 +1,244 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/product.json",
+    "type": "object",
+    "title": "Product",
+    "description": "Product object.",
+    "required": [
+        "id",
+        "publisherid",
+        "currency",
+        "baseprice",
+        "ratetype"
+    ],
+    "properties": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "Id of Product",
+            "description": "A system-generated opaque ID that uniquely identifies this resource.",
+            "maxLength": 36
+        },
+        "publisherid": {
+            "$id": "#/properties/publisherid",
+            "description": "The ID of the Publisher providing this product.",
+            "type": "string",
+            "maxLength": 36
+        },
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Name",
+            "description": "The brand's display name",
+            "maxLength": 100
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "Description",
+            "description": "The product's description",
+            "maxLength": 255
+        },
+        "activedate": {
+            "$id": "#/properties/activedate",
+            "type": "string",
+            "format": "date-time",
+            "title": "Active Date",
+            "description": "The date and time, in UTC, that the product may become part of the bookable inventory"
+        },
+        "allownocreative": {
+            "$id": "#/properties/allownocreative",
+            "type": "boolean",
+            "title": "Allow No Creative",
+            "description": "A Boolean value that indicates whether line items assigned to this order may be booked before creative is assigned"
+        },
+        "currency": {
+            "$id": "#/properties/currency",
+            "type": "string",
+            "title": "Currency",
+            "description": "Identifies the currency for BasePrice and MinSpend",
+            "maxLength": 3
+        },
+        "baseprice": {
+            "$id": "#/properties/baseprice",
+            "type": "number",
+            "title": "Base Price",
+            "description": "The product's base retail price; this is not the rate card price"
+        },
+        "deliverytype": {
+            "$id": "#/properties/deliverytype",
+            "type": "string",
+            "title": "Delivery Type",
+            "description": "Defines the possible types of delivery",
+            "enum": [
+                "exclusive",
+                "guaranteed",
+                "non-guaranteed"
+            ]
+        },
+        "estdailyavails": {
+            "$id": "#/properties/estdailyavails",
+            "type": "string",
+            "title": "Est Daily Avails",
+            "description": "An estimated range of available daily impressions."
+        },
+        "domain": {
+            "$id": "#/properties/domain",
+            "type": "string",
+            "title": "Domain",
+            "description": "Common definition for a domain name",
+            "maxLength": 1024
+        },
+        "icon": {
+            "$id": "#/properties/icon",
+            "type": "string",
+            "title": "Icon",
+            "description": "URL to a thumbnail icon of the product. May be used to display next to the product in the product catalog",
+            "maxLength": 1024
+        },
+        "languages": {
+            "$id": "#/properties/languages",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "pattern": "^[a-zA-Z]{2}$"
+            },
+            "title": "Languages",
+            "description": "A list of creative languages that the product supports from ISO-639-1"
+        },
+        "leadtime": {
+            "$id": "#/properties/leadtime",
+            "type": "integer",
+            "title": "Lead Time",
+            "description": "The number of days (n) from today that a line that reference this product can begin running; the line's start date must be equal to or later than today + n"
+        },
+        "minspend": {
+            "$id": "#/properties/minspend",
+            "type": "number",
+            "title": "Min Spend",
+            "description": "The minimum order value of this Product in the specified currency"
+        },
+        "minflight": {
+            "$id": "#/properties/minflight",
+            "type": "integer",
+            "title": "Min Flight",
+            "description": "The minimum number of days that the product must be booked for. The line must enforce the duration"
+        },
+        "maxflight": {
+            "$id": "#/properties/maxflight",
+            "type": "integer",
+            "description": "The maximum number of days that the product may be booked for. The line must enforce the duration"
+        },
+        "producttags": {
+            "$id": "#/properties/producttags",
+            "items": {
+                "type": "string"
+            },
+            "title": "Product Tags",
+            "description": "List of tags used for searching the product catalog"
+        },
+        "ratetype": {
+            "$id": "#/properties/ratetype",
+            "type": "string",
+            "title": "Rate Type",
+            "description": "Defines a unit of measure that a cost (i.e. BasePrice) is expressed in",
+            "enum": [
+                "CPM",
+                "CPMV",
+                "CPC",
+                "CPD",
+                "FlatRateon-guaranteed"
+            ]
+        },
+        "adunit": {
+            "$id": "#/properties/adunit",
+            "type": "array",
+            "items": {
+                "type": "object"
+            },
+            "title": "Ad Unit",
+            "description": "Details of the Ad Units comprising this Product."
+        },
+        "alladunits": {
+            "$id": "#/properties/alladunits",
+            "type": "integer",
+            "title": "All Ad Units",
+            "description": "Describes whether all child Ad Units are severed together as a group or just one of the Ad Units is served"
+        },
+        "retirementdate": {
+            "$id": "#/properties/retirementdate",
+            "type": "string",
+            "format": "date-time",
+            "title": "Retirement Date",
+            "description": "The date and time, in UTC, that the product may be removed from the bookable inventory"
+        },
+        "tz": {
+            "$id": "#/properties/tz",
+            "type": "string",
+            "title": "Time Zone",
+            "description": "The time zone that the product runs in"
+        },
+        "url": {
+            "$id": "#/properties/url",
+            "type": "string",
+            "title": "URL",
+            "description": "A URL to the specification that describes the creative requirements"
+        },
+        "context": {
+            "$id": "#/properties/context",
+            "type": "object",
+            "title": "Context",
+            "description": "Indicates the type of content being used or consumed by the user in which ads may appear This table has values derived from the TAG Inventory Quality Guidelines (IQG)"
+        },
+        "source": {
+            "$id": "#/properties/source",
+            "type": "object",
+            "title": "Source",
+            "description": "This object describes the nature and behavior of the entity that is the source of the bid request upstream from the exchange"
+        },
+        "pmp": {
+            "$id": "#/properties/pmp",
+            "type": "object",
+            "title": "PMP",
+            "description": "This object is the private marketplace container for direct deals between buyers and sellers that may pertain to this Product"
+        },
+        "producttargeting": {
+            "$id": "#/properties/producttargeting",
+            "ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+        },
+        "availsgroupby": {
+            "$id": "#/properties/availsgroupby",
+            "title": "Avails Group By",
+            "description": "Array of product targeting objects that describe the grouped fields that the Availability data can be returned in"
+        },
+        "reservedexpirytime": {
+            "$id": "#/properties/reservedexpirytime",
+            "type": "string",
+            "title": "Reserved Expiry Time",
+            "format": "DateInterval",
+            "description": "Defines the day of the week and time of day that represents the cut off point for the expiry of a Line for the Product when it is 'reserved.'"
+        },
+        "advertiseridaccess": {
+            "$id": "#/properties/advertiseridaccess",
+            "type": "array",
+            "title": "Advertiser ID Access",
+            "description": "List of AdvertiserIDs with access to this Product. NULL = all accounts can access this product."
+        },
+        "buyeridaccess": {
+            "$id": "#/properties/buyeridaccess",
+            "type": "array",
+            "title": "Buyer ID Access",
+            "description": "List of BuyerIDs with access to this Product. NULL = all accounts can access this product."
+        },
+        "intermediaryidaccess": {
+            "$id": "#/properties/intermediaryidaccess",
+            "type": "array",
+            "title": "Intermediary ID Access",
+            "description": "List of IntermediaryIDs with access to this Product. NULL = all accounts can access this product."
+        },
+        "ext": {
+            "$id": "#/properties/ext",
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/ext.json"
+        }
+    }
+}
