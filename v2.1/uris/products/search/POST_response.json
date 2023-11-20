@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/products/search/POST_response.json",
+    "type": "object",
+    "title": "Response for POST products/search",
+    "description": "A collection of Product objects that match the filter criteria",
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "products": {
+            "type": "array",
+            "description": "Collection of products",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/product.json",
+                "unevaluatedProperties": false,
+                "required": [
+                    "id",
+                    "publisherid",
+                    "currency",
+                    "baseprice",
+                    "ratetype"
+                ]
+            }
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "products"
+    ]
+}
