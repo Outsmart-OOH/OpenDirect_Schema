@@ -209,6 +209,10 @@
         "availsgroupby": {
             "$id": "#/properties/availsgroupby",
             "title": "Avails Group By",
+            "type":"array",
+            "items": {
+                "$ref":"https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+            },
             "description": "Array of product targeting objects that describe the grouped fields that the Availability data can be returned in"
         },
         "reservedexpirytime": {
