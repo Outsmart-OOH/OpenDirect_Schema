@@ -1,9 +1,9 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/{id}/changerequests/POST_request.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/changerequests/(id)/PATCH_request.json",
     "type": "object",
-    "title": "Request for POST /changerequests",
-    "description": "Adds a change request to the account",
+    "title": "Request for PATCH /changerequests/{id}",
+    "description": "Updates the specified change request.",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/changerequest.json"
@@ -16,8 +16,6 @@
     },
     "unevaluatedProperties": false,
     "required": [
-        "accountid",
-        "orderid",
-        "requesterid"
+        
     ]
 }

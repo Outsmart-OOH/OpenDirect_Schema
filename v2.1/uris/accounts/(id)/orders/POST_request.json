@@ -1,9 +1,10 @@
+
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/{id}/orders/POST_response.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/POST_request.json",
     "type": "object",
-    "title": "Response for POST /orders",
-    "description": "Adds an order to the account",
+    "title": "Request for POST /orders",
+    "description": "The schema of a request to POST an order to an account",
     "allOf": [
         {
             "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/order.json"
@@ -12,19 +13,14 @@
     "properties": {
         "$schema": {
             "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
-        },
-        "paging": {
-            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/paging.json"
         }
     },
     "unevaluatedProperties": false,
     "required": [
-        "id",
         "name",
         "accountid",
         "publisherid",
         "currency",
-        "orderstatus",
         "advertiserbrandid"
     ]
 }
