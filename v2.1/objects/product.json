@@ -206,7 +206,8 @@
             "$id": "#/properties/producttargeting",
             "type":"array",
             "items": {
-                "$ref":"https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+                "$ref":"https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json",
+                "required": ["targetvalues"]
             },
             "description": "Array of producttargeting objects used to describe the product inventory and sales rules"
         },
