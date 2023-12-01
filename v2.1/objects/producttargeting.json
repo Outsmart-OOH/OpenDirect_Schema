@@ -9,7 +9,6 @@
         "type",
         "datasource",
         "target",
-        "targetvalues",
         "selectable"
     ],
     "additionalProperties": false,
