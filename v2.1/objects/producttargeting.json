@@ -12,7 +12,7 @@
         "targetvalues",
         "selectable"
     ],
-    "additionalProperties": "false",
+    "additionalProperties": false,
     "properties": {
         "name": {
             "$id": "#/properties/name",
