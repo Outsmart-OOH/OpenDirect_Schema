@@ -1,0 +1,84 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/productavailssearch.json",
+    "type": "object",
+    "title": "Product Avails Search",
+    "description": "Product Avails Search object.",
+    "required": [
+        "productids",
+        "accountid",
+        "startdate",
+        "enddate"
+    ],
+    "properties": {
+        "productids": {
+            "$id": "#/properties/properties",
+            "type": "array",
+            "title": "Product IDs",
+            "description": "A list of IDs that identify the products on which to get availability and pricing information."
+        },
+        "targeting": {
+            "$id": "#/properties/targeting",
+            "type": "array",
+            "title": "Targeting",
+            "description": "The segments to target. For example, behavioral, age, and gender segments."
+        },
+        "producttargeting": {
+            "$id": "#/properties/producttargeting",
+            "ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+        },
+        "accountid": {
+            "$id": "#/properties/accountid",
+            "type": "string",
+            "title": "Account ID",
+            "description": "The ID of the account that identifies the buyer, advertiser, and any other stakeholders.",
+            "maxLength": 36
+        },
+        "currency": {
+            "$id": "#/properties/currency",
+            "type": "string",
+            "title": "Currency",
+            "maxLength": 3,
+            "description": "The currency used to specify Price. Currency is set for the PRODUCT resource specified in section 2.7 and uses CURRENCY reference data specified in section 4.6."
+        },
+        "advertiserbrandid": {
+            "$id": "#/properties/advertiserbrandid",
+            "type": "string",
+            "title": "Advertiser Brand ID",
+            "maxLength": 36,
+            "description": "An ID that uniquely identifies the Brand being advertised."
+        },
+        "availabilityfields": {
+            "$id": "#/properties/availabilityfields",
+            "type": "array",
+            "items": {
+                "ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+            },
+            "title": "Availability Fields",
+            "description": "Defines the ProductTargeting object metrics that availability is returned as."
+        },
+        "grouping": {
+            "$id": "#/properties/grouping",
+            "type": "array",
+            "items": {
+                "ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+            },
+            "title": "Grouping",
+            "description": "Defines the ProductTargeting object metrics that the availability output is grouped as."
+        },
+        "startdate": {
+            "$id": "#/properties/startdate",
+            "type": "string",
+            "format": "date-time",
+            "title": "Start Date",
+            "description": "The desired start date for inventory delivery in ISO-8601 format."
+        },
+        "enddate": {
+            "$id": "#/properties/enddate",
+            "type": "string",
+            "format": "date-time",
+            "title": "End Date",
+            "description": "The desired end date for inventory delivery in ISO-8601 format."
+        }
+    }
+}
