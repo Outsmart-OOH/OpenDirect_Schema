@@ -1,0 +1,66 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/avails.json",
+    "type": "object",
+    "title": "Avails",
+    "description": "Avails object.",
+    "additionalProperties": false,
+    "properties": {
+        "productid": {
+            "$id": "#/properties/productid",
+            "type": "string",
+            "title": "ProductID",
+            "description": "ID that identifies the product for which availability and pricing information is provided",
+            "maxLength": 36
+        },
+        "accountid": {
+            "$id": "#/properties/accountid",
+            "type": "string",
+            "title": "AccountID",
+            "description": "The ID of the account that identifies the buyer, advertiser, and any other stakeholders.",
+            "maxLength": 36
+        },
+        "availability": {
+            "$id": "#/properties/availability",
+            "type": "integer",
+            "title": "Availability",
+            "description": "The quantity available for booking for the specified date range. Availability for a given date range may vary."
+        },
+        "availsstatus": {
+            "$id": "#/properties/availsstatus",
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/availsstatus.json"
+            },
+            "title": "Avails Status",
+            "description": "An object that groups the inventory availbility into Available, Partially Available and Unavailable arrays of ProductTargeting objects"
+        },
+        "currency": {
+            "$id": "#/properties/currency",
+            "type": "string",
+            "title": "Currency",
+            "description": "The currency used to specify Price. Currency is set for the PRODUCT resource specified in section 2.7 and uses CURRENCY reference data specified in section 4.6.",
+            "pattern": "^[A-Z]{3}$"
+        },
+        "price": {
+            "$id": "#/properties/price",
+            "type": "number",
+            "title": "Price",
+            "description": "The product's price"
+        },
+        "startdate": {
+            "$id": "#/properties/startdate",
+            "type": "string",
+            "title": "Start Date",
+            "description": "The requested start date for inventory delivery",
+            "format": "date-time"
+        },
+        "enddate": {
+            "$id": "#/properties/enddate",
+            "type": "string",
+            "title": "End Date",
+            "description": "The requested end date for inventory delivery",
+            "format": "date-time"
+        }
+    }
+}
