@@ -2,7 +2,7 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/availsstatus.json",
     "type": "object",
-    "title": "AvailsStatus",
+    "title": "Avails Status",
     "description": "AvailsStatus object.",
     "required": [
         "status",
@@ -14,14 +14,32 @@
             "type": "string",
             "title": "Status",
             "description": "Summary definition of the inventory described in the Targeting Array",
-            "enum": ["Available", "Partially Available", "Unavailable"]
+            "enum": [
+                "Available",
+                "Partially Available",
+                "Unavailable"
+            ]
         },
         "reason": {
             "$id": "#/properties/reason",
             "type": "string",
             "title": "Reason",
             "description": "State the reason if Partially Available or Unavailable from the list",
-            "enum": ["Booked", "Optioned", "Excluded", "OutOfCharge", "Prohibited", "Manual Trade Only", "InvalidPeriodLength", "InvalidFrameID", "InvalidBudget", "InvalidPrice", "ClientDuplication", "LocationDuplication", "LocationJuxta"]
+            "enum": [
+                "Booked",
+                "Optioned",
+                "Excluded",
+                "OutOfCharge",
+                "Prohibited",
+                "Manual Trade Only",
+                "InvalidPeriodLength",
+                "InvalidFrameID",
+                "InvalidBudget",
+                "InvalidPrice",
+                "ClientDuplication",
+                "LocationDuplication",
+                "LocationJuxta"
+            ]
         },
         "comment": {
             "$id": "#/properties/comment",
@@ -32,20 +50,20 @@
         "context": {
             "$id": "#/properties/context",
             "type": "array",
-            "title": "Context",
-            "description": "Array of ProductTargeting objects describing the context of any Partially Available or Unavailable status, e.g., this could be a frame that is causing a duplication error",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
-            }
+            },
+            "title": "Context",
+            "description": "Array of ProductTargeting objects describing the context of any Partially Available or Unavailable status"
         },
         "producttargeting": {
             "$id": "#/properties/producttargeting",
             "type": "array",
-            "title": "Product Targeting",
-            "description": "Array of ProductTargeting objects describing the inventory that is at Available, Partially Available, or Unavailable status",
             "items": {
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
-            }
+            },
+            "title": "Product Targeting",
+            "description": "Array of ProductTargeting objects describing the inventory that is at Available, Partially Available or Unavailable status"
         }
     }
 }
