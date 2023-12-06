@@ -30,7 +30,7 @@
                 "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
             },
             "title": "Product Targeting",
-            "description": "The Inventory, Delivery, Investement and Distribution ProductTargeting objects to be targeted for the availability request",
+            "description": "The Inventory, Delivery, Investement and Distribution ProductTargeting objects to be targeted for the availability request"
         },
         "accountid": {
             "$id": "#/properties/accountid",
