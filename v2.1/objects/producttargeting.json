@@ -8,8 +8,7 @@
         "name",
         "type",
         "datasource",
-        "target",
-        "selectable"
+        "target"
     ],
     "additionalProperties": false,
     "properties": {
