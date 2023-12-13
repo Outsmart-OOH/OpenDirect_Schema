@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/products/avails/POST_request.json",
+    "type": "object",
+    "title": "Request for POST /product/avails",
+    "description": "Request for Products Avails using Product Avails Search",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/productavailssearch.json"
+        }
+    ],
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "paging": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/paging.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "productids",
+        "accountid",
+        "startdate",
+        "enddate"
+    ]
+}
