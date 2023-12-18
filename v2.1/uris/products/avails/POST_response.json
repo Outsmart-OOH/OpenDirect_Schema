@@ -1,0 +1,30 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/products/avails/POST_response.json",
+    "type": "object",
+    "title": "Response for POST products/avails",
+    "description": "Gets pricing and avails information for the specified products",
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "avails": {
+            "type": "array",
+            "description": "Collection of avails",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/avails.json",
+                "unevaluatedProperties": false,
+                "required": [
+                    "productid",
+                    "price"
+                ]
+            }
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "avails"
+    ]
+}
+
+
