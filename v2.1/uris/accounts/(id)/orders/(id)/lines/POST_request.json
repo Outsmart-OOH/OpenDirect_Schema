@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/lins/POST_request.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/lines/POST_request.json",
     "type": "object",
     "title": "Request for POST /lines",
     "description": "The schema of a request that adds a line to the order",
