@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/line/GET_response.json",
+    "type": "object",
+    "title": "Response for GET /lines",
+    "description": "The schema of a response that gets a list of all lines in the order",
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        },
+        "lines": {
+            "type": "array",
+            "description": "Collection of lines",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/line.json",
+                "unevaluatedProperties": false,
+                "required": [
+                    "id",
+                    "name",
+                    "productid",
+                    "bookingstatus",
+                    "startdate",
+                    "enddate"
+                ]
+            }
+        },
+        "paging": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/paging.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "lines"
+    ]
+}
