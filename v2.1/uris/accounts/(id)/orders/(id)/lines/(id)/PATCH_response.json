@@ -1,0 +1,26 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/line/(id)PATCH_response.json",
+    "type": "object",
+    "title": "Response for PATCH /line/{id}",
+    "description": "Updates the specified line.",
+    "allOf": [
+        {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/line.json"
+        }
+    ],
+    "properties": {
+        "$schema": {
+            "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/properties/schema.json"
+        }
+    },
+    "unevaluatedProperties": false,
+    "required": [
+        "id",
+        "name",
+        "productid",
+        "bookingstatus",
+        "startdate",
+        "enddate"
+    ]
+}
