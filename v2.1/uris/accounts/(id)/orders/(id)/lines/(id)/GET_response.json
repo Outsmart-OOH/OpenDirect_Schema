@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/line/(id)/GET_response.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/lines/(id)/GET_response.json",
     "type": "object",
     "title": "Response for GET /orders/{id}",
     "description": "Gets the specified order",
