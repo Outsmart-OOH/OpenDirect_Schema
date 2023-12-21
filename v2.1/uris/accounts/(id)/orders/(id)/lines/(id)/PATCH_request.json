@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/line/(id)/PATCH_request.json",
+    "$id": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/uris/accounts/(id)/orders/(id)/lines/(id)/PATCH_request.json",
     "type": "object",
     "title": "Request for PATCH /line/{id}",
     "description": "Updates the specified line",
