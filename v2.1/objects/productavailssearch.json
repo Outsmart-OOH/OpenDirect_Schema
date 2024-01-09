@@ -26,9 +26,11 @@
         "producttargeting": {
             "$id": "#/properties/producttargeting",
             "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
-            },
+            "items": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+                }
+            ],
             "title": "Product Targeting",
             "description": "The Inventory, Delivery, Investement and Distribution ProductTargeting objects to be targeted for the availability request"
         },
