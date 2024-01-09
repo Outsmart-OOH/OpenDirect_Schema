@@ -59,9 +59,11 @@
         "producttargeting": {
             "$id": "#/properties/producttargeting",
             "type": "array",
-            "items": {
-                "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
-            },
+            "items": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Outsmart-OOH/OpenDirect_Schema/main/v2.1/objects/producttargeting.json"
+                }
+            ],
             "title": "Product Targeting",
             "description": "Array of ProductTargeting objects describing the inventory that is at Available, Partially Available or Unavailable status"
         }
