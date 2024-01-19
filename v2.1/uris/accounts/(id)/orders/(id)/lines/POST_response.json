@@ -22,10 +22,6 @@
         "productid",
         "bookingstatus",
         "startdate",
-        "enddate",
-        "ratetype",
-        "rate",
-        "qty",
-        "cost"
+        "enddate"
     ]
 }
